@@ -1,0 +1,54 @@
+/* body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+} */
+
+:root {
+  --amarillo: #EAC926;
+  --azul: #03264C;
+  --celeste: #1259c3;
+  --gris_oscuro: #666;
+  --gris_claro: #ebebeb;
+  --verde: #39b54a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parragraph {
+  font-size: 12px;
+}
+
+.titles {
+  font-size: 24px;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.discount {
+  font-size: 16px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+/* Hearder */
+
+#encabezado {
+  background-color: var(--amarillo);
+  display: flex;
+}
+
+#principal {
+  display: flex;
+}
+

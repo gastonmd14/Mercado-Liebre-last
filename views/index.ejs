@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <header id="encabezado">
+    <img src="images/logo-mercado-liebre.svg" alt="">
+    <input type="search" name="buscar" id="buscar" placeholder="Buscar productos, marcas y más">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-hand-holding-usd"></i>
+    <p class="parrafos">Comprá en cuotas y sin tarjeta de crédito</p>
+    <nav id="navegacion">
+      <i class="fas fa-bars"></i>
+      <ul class="navegacion_links">
+        <li><a href="/" >Ofertas</a></li>
+        <li><a href="/" >Tiendas Oficiales</a></li>
+        <li><a href="/" >Vender</a></li>
+        <li><a href="/" >Ayuda</a></li>
+        <br>
+        <li><a href="users/register" >Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+        <li><a href="users/login" >Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+        <li><a href="/">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="banner">
+    <img src="images/img-home-banner.jpg" alt="banner" class="baner">
+
+  </section>
+  <main id="principal">
+    <section>
+      <h2 class="titulares">Basado en tu última visita</h2>
+      <article>
+        <img src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+        <i class="fas fa-truck"></i>
+        <p class="precios m-0-10">$6.770</p>
+        <p class="descuentos">40% OFF</p>
+        <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
+      </article>
+      <article>
+        <img src="images/products/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019" class="mitad">
+        <i class="fas fa-truck"></i>
+        <p class="precios">$230.000</p>
+        <p class="descuentos">20% OFF</p>
+        <p class="descripcion">Macbook Pro 2019 Lorem ipsum, dolor sit amet.</p>
+      </article>
+
+    </section>
+    <section>
+      <h2 class="titulares">Ofertas</h2>
+      <article>
+        <img src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+        <i class="fas fa-truck"></i>
+        <p class="precios m-0-10">$6.770</p>
+        <p class="descuentos">40% OFF</p>
+        <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
+      </article>
+      <article>
+        <img src="images/products/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019" class="mitad">
+        <i class="fas fa-truck"></i>
+        <p class="precios">$230.000</p>
+        <p class="descuentos">20% OFF</p>
+        <p class="descripcion">Macbook Pro 2019 Lorem ipsum, dolor sit amet.</p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <article>
+
+    </article>
+    <div>
+
+    </div>
+  </footer>
+  
+</body>
 </html>
