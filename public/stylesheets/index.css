@@ -30,6 +30,8 @@ a {
   color: black;
 }
 
+
+
 .parragraph {
   font-size: 12px;
 }
@@ -55,6 +57,12 @@ a {
   color: var(--gris_oscuro);
   margin: 10px;
   display: none;
+}
+
+.description-pie {
+  font-size: 16px;
+  color: var(--gris_oscuro);
+  margin: 10px;
 }
 
 /* Hearder */
@@ -100,9 +108,8 @@ a {
 .arti{
   background-color: white;
   padding: 15px;
+  margin: 20px 0;
 }
-
-
 
 .arti img{
   width: 100%;
@@ -155,6 +162,7 @@ a {
 
 .arti-pie {
   margin: 20px;
+  text-align: center;
 }
 
 /* Login */
@@ -228,4 +236,3 @@ a {
 .boton-borrar :hover {
   background-color: #CC1155;
 }
-
