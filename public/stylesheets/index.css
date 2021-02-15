@@ -53,6 +53,8 @@ a {
 .description {
   font-size: 16px;
   color: var(--gris_oscuro);
+  margin: 10px;
+  display: none;
 }
 
 /* Hearder */
@@ -100,12 +102,18 @@ a {
   padding: 15px;
 }
 
+
+
 .arti img{
   width: 100%;
 }
 
 .arti i {
   color: var(--verde);
+}
+
+.arti :hover .description {
+  display: block;
 }
 
 .middle {
@@ -127,6 +135,10 @@ a {
   border: 1px solid green;
   padding: 5px;
   border-radius: 15px;
+}
+
+.total {
+  margin: 10px;
 }
 
 /* Footer */
@@ -198,6 +210,14 @@ a {
 
 .fecha {
   background-color: var(--gris_oscuro);
+}
+
+.perfil input {
+  width: 10%;
+}
+
+.interes input {
+  width: 10%;
 }
 
 .borrar {
