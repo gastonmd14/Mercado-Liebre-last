@@ -12,7 +12,6 @@
 	<!-- Own Stylesheet -->
 	<link rel="stylesheet" href="/stylesheets/app.css">
 </head>
-
 <body>
 	<!-- Header -->
 	<header class="main-header">
@@ -62,64 +61,48 @@
 	</header>
 	<!-- /Header -->
 
-	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%= detalle.name %></h2>
+				<h2 class="products-title">Formulario de creación de productos</h2>
 			</div>
 		</div>
-		<div class="product-detail">
-			<div class="row">
-				<div class="col-12 col-lg-8">
-					<img src="/images/products/<%= detalle.image %>" alt="product image" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= detalle.description %>
-					</p>
+		<div class="col-12">
+			<form action="/products" method="POST">
+				<div class="row product-detail">
+					<div class="col-12 col-md-6">
+						<label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="price" class="form-label">Precio del producto:</label>
+						<input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="discount" class="form-label">Descuento:</label>
+						<input type="text" id="discount" name="discount" placeholder="Ej: 15" class="form-input">
+					</div>
+					<div class="col-12 col-md-6">
+						<label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="in-sale">En oferta</option>
+							<option value="visited">Últimos agregados</option>
+						</select>
+					</div>
+					<div class="col-12">
+						<label for="description" class="form-label">Descipción:</label>
+						<textarea name="description" id="description" class="form-input"></textarea>
+					</div>
+					<div class="col-12">
+						<button type="submit" class="buy-now-button">Guardar producto</button>
+					</div>
 				</div>
-				<div class="col-12 col-lg-4">
-					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= detalle.name %></h2>
-						
-							<p class="product-detail-price small">
-								<span>$<%= convertir(detalle.price) %></span>
-								/
-								<b><%= detalle.discount %>% OFF</b>
-							</p>
-							<% if (detalle.discount > 0) { %>							
-								<p class="product-detail-price">
-									<% precioFinal = (detalle.price - detalle.discount) %>
-									$ <%= convertir(precioFinal) %>
-								</p>
-							<% } else { %>
-								<p class="product-detail-price">
-									$ <%= convertir(detalle.price) %>
-								</p>
-							<% } %>
-						<ul class="actions-list">
-							<li>
-								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
-							</li>
-							<li>
-								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
-							</li>
-						</ul>
-
-						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-
-						<a href="/products/edit/<%= detalle.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/delete/<%= detalle.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
-					</article>
-				</div>
-			</div>
+			</form>
 		</div>
+
 	</div>
-	<!-- /product detail -->
+	<!-- /todos los productos -->
 
 	<!-- footer -->
 	<footer class="main-footer">
@@ -158,6 +141,5 @@
 		</div>
 	</div>
 	<!-- /footer -->
-
 </body>	
 </html>

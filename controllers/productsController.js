@@ -20,6 +20,30 @@ const controller = {
 		console.log(detalle);
 		res.render('products/detail', {detalle: detalle, convertir: toThousand})
 	},
+
+	create: (req, res) => {
+		res.render('products/product-create-form')
+	},
+
+	store: (req, res) => {
+
+		let pathFile = path.join('data','newProducts.json')
+
+		let nuevoProduct = fs.readFileSync(pathFile, { encoding: 'utf-8' })
+
+		nuevoProduct = JSON.parse(nuevoProduct)
+
+		nuevoProduct.push({
+		...req.body,
+		id: nuevoProduct[nuevoProduct.length - 1].id + 1,
+		})
+
+		nuevoProduct = JSON.stringify(nuevoProduct)
+
+		fs.writeFileSync(pathFile, nuevoProduct)		
+
+		res.send('Producto Creado')
+	},
 };
 
 module.exports = controller;
