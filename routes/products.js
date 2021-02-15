@@ -10,4 +10,9 @@ router.post('/', productsController.store);
 
 router.get('/detail/:id/', productsController.detail); 
 
+router.get('/edit/:id/', productsController.edit); 
+router.put('/update/:id', productsController.update); 
+
+router.delete('/delete/:id', productsController.destroy);
+
 module.exports = router;
