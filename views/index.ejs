@@ -1,45 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <title>Document</title>
-</head>
+  <%- include('./partials/head', {title: 'Inicio'}) %>
 <body>
-  <header id="encabezado">
-    <div class="logo">
-      <img src="images/logo-mercado-liebre.svg" alt="">
-    </div> 
-    <div>
-      <input type="search" name="buscar" id="buscar" placeholder="Buscar productos, marcas y más">
-      <i class="fas fa-search"></i>
-    </div>
-    <div>
-      <i class="fas fa-hand-holding-usd"></i>
-      <p class="parragraph">Comprá en cuotas y sin tarjeta de crédito</p>
-    </div>
-    <nav id="navegacion">
-      <i class="fas fa-bars"></i>
-      <ul>
-        <li><a href="/" >Ofertas</a></li>
-        <li><a href="/" >Tiendas Oficiales</a></li>
-        <li><a href="/" >Vender</a></li>
-        <li><a href="/" >Ayuda</a></li>
-        <br>
-        <li><a href="users/register" >Creá tu cuenta</a><i class="far fa-id-card"></i></li>
-        <li><a href="users/login" >Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
-        <li><a href="/">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
-      </ul>
-    </nav>
-  </header>
+  <%- include('./partials/headerNavbar') %>
   <section id="banner">
     <img src="images/img-home-banner.jpg" alt="banner">
   </section>
   <main id="principal">
-    <section>
+    <section class="visitas">
       <h1 class="titles">Basado en tu última visita</h1>
       <article class="arti">
         <img src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
@@ -48,17 +16,16 @@
         <p class="discount">40% OFF</p>
         <p class="description">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
       </article>
-      <article class="arti">
+      <article class="arti middle">
         <img src="images/products/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019" class="mitad">
         <i class="fas fa-truck"></i>
         <p class="price">$230.000</p>
         <p class="discount">20% OFF</p>
         <p class="description">Macbook Pro 2019 Lorem ipsum, dolor sit amet.</p>
       </article>
-
     </section>
-    <section>
-      <h2 class="titulares">Ofertas</h2>
+    <section class="ofertas">
+      <h2 class="titles">Ofertas</h2>
       <article class="arti">
         <img src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
         <i class="fas fa-truck"></i>
@@ -66,7 +33,7 @@
         <p class="discount">40% OFF</p>
         <p class="description">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
       </article>
-      <article class="arti">
+      <article class="arti middle">
         <img src="images/products/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019" class="mitad">
         <i class="fas fa-truck"></i>
         <p class="price">$230.000</p>
@@ -75,29 +42,6 @@
       </article>
     </section>
   </main>
-  <footer id="pie">
-    <article>
-      <i class="fas fa-credit-card"></i>
-      <h2>Pagá con tarjeta o en efectivo</h2>
-      <p class="description">Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivoen puntos de
-          pago. ¡Y siempre es seguro!</p>
-  </article>
-  <article>
-      <i class="fas fa-gift"></i>
-      <h2>Envío gratis desde los $ 2.500</h2>
-      <p class="description">Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
-          productos. Es un beneficio de MercadoPuntos.</p>
-  </article>
-  <article>
-      <i class="fas fa-user-shield"></i>
-      <h2>Envío gratis desde los $ 2.500</h2>
-      <p class="description">Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
-          productos. Es un beneficio de MercadoPuntos.</p>
-  </article>
-  <div>
-      <p>Copyright © 1999-2019 MercadoLiebre S.R.L.</p>
-  </div>
-  </footer>
-  
+  <%- include('./partials/footer') %>  
 </body>
 </html>

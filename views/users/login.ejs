@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <%- include('../partials/head', {title: 'Inicio'}) %>
+  <body>
+    <%- include('../partials/headerNavbar') %>
+    <main>
+        <form action="/" method="POST" class="form-login">
+            <section>                       
+                <input type="text" placeholder="Nombre de Usuario">
+                <input type="password" name="contraseña" id="contraseña" placeholder="Elegi tu contraseña">
+                  <input type="submit" value="Enviar"> 
+            </section>                    
+        </form>      
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
+</html>
