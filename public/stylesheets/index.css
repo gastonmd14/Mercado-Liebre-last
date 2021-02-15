@@ -42,6 +42,7 @@ a {
 
 .price {
   font-size: 18px;
+  margin: 20px 20px 20px 0
 }
 
 .discount {
@@ -111,6 +112,23 @@ a {
   margin: 20px 0;
 }
 
+.bloque {
+  border-top: 1px solid #ebebeb ;
+}
+
+.icono {
+  text-align: right;
+  position: relative;
+  margin-top: -15px;
+  margin-right: 15px;
+}
+
+.icono .fa-truck {
+  border: 1px solid green;
+  padding: 5px;
+  border-radius: 15px;
+}
+
 /* Footer */
 
 #pie {
@@ -126,3 +144,68 @@ a {
 .arti-pie {
   margin: 20px;
 }
+
+/* Login */
+
+#main-login {
+  display: flex;
+  justify-content: center;
+  background-color: var(--gris_claro);
+}
+
+.login {
+  width: 90%;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.enviar {
+  background-color: #0044AA;
+  color: white;
+}
+
+.boton-enviar :hover {
+  background-color: #0022AA;
+}
+
+/* Register */
+
+#main-register {
+  display: flex;
+  justify-content: center;
+  background-color: var(--gris_claro);
+}
+
+.register {
+  width: 90%;
+}
+
+.register input {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.fecha {
+  background-color: var(--gris_oscuro);
+}
+
+.borrar {
+  background-color: #AA0044;
+  color: white;
+}
+
+.boton-borrar :hover {
+  background-color: #CC1155;
+}
+
