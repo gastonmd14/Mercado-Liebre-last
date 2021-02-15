@@ -21,12 +21,22 @@ a {
   padding: 0;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .parragraph {
   font-size: 12px;
 }
 
 .titles {
   font-size: 24px;
+  color: var(--gris_oscuro);
 }
 
 .price {
@@ -35,10 +45,12 @@ a {
 
 .discount {
   font-size: 16px;
+  color: var(--verde);
 }
 
 .description {
   font-size: 16px;
+  color: var(--gris_oscuro);
 }
 
 /* Hearder */
@@ -67,8 +79,16 @@ a {
   background-color: var(--gris_claro);
 }
 
+.arti{
+  background-color: white
+}
+
 .arti img{
   width: 100%;
+}
+
+.arti i {
+  color: var(--verde);
 }
 
 /* Footer */
@@ -76,4 +96,8 @@ a {
 #pie {
   display: flex;
   flex-direction: column;
+}
+
+#pie i {
+  color: var(--celeste);
 }
