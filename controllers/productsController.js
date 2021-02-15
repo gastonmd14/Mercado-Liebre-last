@@ -19,7 +19,6 @@ const controller = {
       }
     });
 
-    console.log(detalle);
     res.render("products/detail", { detalle: detalle, convertir: toThousand });
   },
 
@@ -28,7 +27,7 @@ const controller = {
   },
 
   store: (req, res) => {
-    let pathFile = path.join("data", "newProducts.json");
+    let pathFile = path.join("data", "productsDataBase.json");
 
     let nuevoProduct = fs.readFileSync(pathFile, { encoding: "utf-8" });
 
@@ -43,7 +42,7 @@ const controller = {
 
     fs.writeFileSync(pathFile, nuevoProduct);
 
-    res.send("Producto Creado");
+    res.redirect('/products');
   },
 
   edit: (req, res) => {
@@ -56,35 +55,28 @@ const controller = {
   },
 
   update: (req, res) => {
-    //console.log(req.params);
-    //console.log(req.body);
-
     let pathFile = path.join("data", "productsDataBase.json");
-
     let actualProduct = fs.readFileSync(pathFile, { encoding: "utf-8" });
-
     actualProduct = JSON.parse(actualProduct);
+    actualProduct = actualProduct.map(function(buscar) {
+		if (buscar.id == req.params.id) {
+			buscar = {...req.body};
+			buscar.id = req.params.id;
 
-    actualProduct = actualProduct.map(function (buscar) {
-      if (buscar.id == req.params.id) {
-		  (buscar.name = req.body.name),
-		  (buscar.price = req.body.price),
-		  (buscar.discount = req.body.discount),
-		  (buscar.category = req.body.category),
-		  (buscar.description = req.body.description);
-    	return buscar;
-      }
-    });
+			return buscar;
+		}
+	  });
 
+
+
+  	
     actualProduct = JSON.stringify(actualProduct);
-
     fs.writeFileSync(pathFile, actualProduct);
-
-    res.send("Producto Actualizado!!");
+    res.redirect('/products');
   },
 
   destroy: (req, res) => {
-    let pathFile = path.join("data", "newProducts.json");
+    let pathFile = path.join("data", "productsDataBase.json");
 
     let actualProduct = fs.readFileSync(pathFile, { encoding: "utf-8" });
 
@@ -100,7 +92,7 @@ const controller = {
 
     fs.writeFileSync(pathFile, actualProduct);
 
-    res.send("Producto Borrado!!");
+    res.redirect('/');
   },
 };
 
