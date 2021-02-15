@@ -10,11 +10,17 @@
 </head>
 <body>
   <header id="encabezado">
-    <img src="images/logo-mercado-liebre.svg" alt="">
-    <input type="search" name="buscar" id="buscar" placeholder="Buscar productos, marcas y más">
-    <i class="fas fa-search"></i>
-    <i class="fas fa-hand-holding-usd"></i>
-    <p class="parrafos">Comprá en cuotas y sin tarjeta de crédito</p>
+    <div class="logo">
+      <img src="images/logo-mercado-liebre.svg" alt="">
+    </div> 
+    <div>
+      <input type="search" name="buscar" id="buscar" placeholder="Buscar productos, marcas y más">
+      <i class="fas fa-search"></i>
+    </div>
+    <div>
+      <i class="fas fa-hand-holding-usd"></i>
+      <p class="parrafos">Comprá en cuotas y sin tarjeta de crédito</p>
+    </div>
     <nav id="navegacion">
       <i class="fas fa-bars"></i>
       <ul class="navegacion_links">
@@ -31,19 +37,18 @@
   </header>
   <section id="banner">
     <img src="images/img-home-banner.jpg" alt="banner" class="baner">
-
   </section>
   <main id="principal">
     <section>
       <h2 class="titulares">Basado en tu última visita</h2>
-      <article>
+      <article class="arti">
         <img src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
         <i class="fas fa-truck"></i>
         <p class="precios m-0-10">$6.770</p>
         <p class="descuentos">40% OFF</p>
         <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
       </article>
-      <article>
+      <article class="arti">
         <img src="images/products/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019" class="mitad">
         <i class="fas fa-truck"></i>
         <p class="precios">$230.000</p>
@@ -54,14 +59,14 @@
     </section>
     <section>
       <h2 class="titulares">Ofertas</h2>
-      <article>
+      <article class="arti">
         <img src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
         <i class="fas fa-truck"></i>
         <p class="precios m-0-10">$6.770</p>
         <p class="descuentos">40% OFF</p>
         <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
       </article>
-      <article>
+      <article class="arti">
         <img src="images/products/img-macbook-pro-2019.jpg" alt="Macbook Pro 2019" class="mitad">
         <i class="fas fa-truck"></i>
         <p class="precios">$230.000</p>
@@ -70,13 +75,28 @@
       </article>
     </section>
   </main>
-  <footer>
+  <footer id="pie">
     <article>
-
-    </article>
-    <div>
-
-    </div>
+      <i class="fas fa-credit-card"></i>
+      <p>Pagá con tarjeta o en efectivo</p>
+      <p>Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivoen puntos de
+          pago. ¡Y siempre es seguro!</p>
+  </article>
+  <article>
+      <i class="fas fa-gift"></i>
+      <p>Envío gratis desde los $ 2.500</p>
+      <p>Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
+          productos. Es un beneficio de MercadoPuntos.</p>
+  </article>
+  <article>
+      <i class="fas fa-user-shield"></i>
+      <p>Envío gratis desde los $ 2.500</p>
+      <p>Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
+          productos. Es un beneficio de MercadoPuntos.</p>
+  </article>
+  <div>
+      <p>Copyright © 1999-2019 MercadoLiebre S.R.L.</p>
+  </div>
   </footer>
   
 </body>

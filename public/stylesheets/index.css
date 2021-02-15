@@ -46,9 +46,34 @@ a {
 #encabezado {
   background-color: var(--amarillo);
   display: flex;
+  flex-direction: column;
 }
+
+.logo {
+  width: 50%;
+}
+
+/* Banner */
+
+#banner img{
+  width: 100%;
+}
+
+/* Main */
 
 #principal {
   display: flex;
+  flex-direction: column;
+  background-color: var(--gris_claro);
 }
 
+.arti img{
+  width: 100%;
+}
+
+/* Footer */
+
+#pie {
+  display: flex;
+  flex-direction: column;
+}
