@@ -33,10 +33,26 @@ const controller = {
 
     nuevoProduct = JSON.parse(nuevoProduct);
 
-    nuevoProduct.push({
-      ...req.body,
-      id: nuevoProduct[nuevoProduct.length - 1].id + 1,
-    });
+    if(req.files.length == []) {
+
+      nuevoProduct.push({
+        ...req.body,
+        id: nuevoProduct[nuevoProduct.length - 1].id + 1,
+        image: ""
+      });      
+
+    } else {
+
+      nuevoProduct.push({
+        ...req.body,
+        id: nuevoProduct[nuevoProduct.length - 1].id + 1,
+        image: req.files[0].filename
+
+      });
+
+      
+
+    }
 
     nuevoProduct = JSON.stringify(nuevoProduct);
 
