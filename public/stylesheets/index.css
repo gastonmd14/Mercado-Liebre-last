@@ -30,6 +30,19 @@ a {
   color: black;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.asc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buy {
+  margin-top: 20px;
+}
 
 
 .parragraph {
@@ -39,7 +52,7 @@ a {
 .titles {
   font-size: 24px;
   color: var(--gris_oscuro);
-  margin: 20px 0;
+  margin: 20px;
 }
 
 .price {
@@ -69,13 +82,59 @@ a {
 
 #encabezado {
   background-color: var(--amarillo);
+  padding: 15px  20px;
+
+}
+
+.logo {
+  width: 40%;
+}
+
+.buscar {
+  margin-left: 20px;
+  display: flex;
+}
+
+.buscar input {
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px 0 0 5px;
+}
+
+.lupa {
+  background-color: white;
+  padding: 10px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Navbar */
+
+#navegacion {
+  display: none;
+}
+
+.icon {
   display: flex;
   flex-direction: column;
 }
 
-.logo {
-  width: 50%;
+.ico {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #0044AA;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  align-self: center;
 }
+
+.icon :hover #navegacion {
+  display: block;
+}
+
 
 /* Banner */
 
@@ -158,6 +217,7 @@ a {
 
 #pie i {
   color: var(--celeste);
+  font-size: 2em;
 }
 
 .arti-pie {
@@ -235,4 +295,60 @@ a {
 
 .boton-borrar :hover {
   background-color: #CC1155;
+}
+
+@media (min-width: 768px) {
+
+  .titles {
+    margin: 20px 40px;
+  }
+
+	.visitas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .visitas a {
+    width: 49%;
+  }
+  
+  .ofertas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ofertas a {
+    width: 49%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .visitas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .visitas a {
+    width: 23%;
+  }
+
+  .ofertas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .ofertas a {
+    width: 23%;
+  }
+
+  .pie-mayor {
+    display: flex;
+    flex-direction: row;
+  }
+
 }

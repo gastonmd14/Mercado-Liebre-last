@@ -11,8 +11,11 @@
     <img src="images/img-home-banner.jpg" alt="banner">
   </section>
   <main id="principal">
-    <section class="visitas">
+    <div>
       <h1 class="titles">Basado en tu última visita</h1>
+    </div>  
+    <section class="visitas">
+          
 
       <% for(let visita of visitada) { %> 
 
@@ -35,9 +38,13 @@
       <% } %>  
 
     </section>
-    <section class="ofertas">
+    <div>
       <h2 class="titles">Ofertas</h2>
+    </div>
+    <section class="ofertas">
+      
       <% for(let oferta of ofertada) { %>
+
         <a href="/products/detail/<%= oferta.id %>">
           <article class="arti">
             <img src="images/products/<%= oferta.image %>" alt="Cafetera Moulinex">
@@ -53,7 +60,9 @@
             </div>
           </article>
         </a>
+
       <% } %>
+      
     </section>
   </main>
 
