@@ -55,23 +55,35 @@ const controller = {
   },
 
   update: (req, res) => {
+    
     let pathFile = path.join("data", "productsDataBase.json");
+
     let actualProduct = fs.readFileSync(pathFile, { encoding: "utf-8" });
+
     actualProduct = JSON.parse(actualProduct);
-    actualProduct = actualProduct.map(function(buscar) {
-		if (buscar.id == req.params.id) {
-			buscar = {...req.body};
-			buscar.id = req.params.id;
 
-			return buscar;
-		}
-	  });
+    buscar = [...actualProduct]
 
+    for(let i = 0; i < buscar.length; i++) {
 
+      if (buscar[i].id == req.params.id) {
 
-  	
+        buscar[i].name = req.body.name,
+        buscar[i].price = req.body.price,
+        buscar[i].discount = req.body.discount,
+        buscar[i].category = req.body.category,
+        buscar[i].description = req.body.description
+
+        break
+
+      }
+
+    }  	
+
     actualProduct = JSON.stringify(actualProduct);
+
     fs.writeFileSync(pathFile, actualProduct);
+    
     res.redirect('/products');
   },
 
