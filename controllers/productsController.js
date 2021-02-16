@@ -74,6 +74,16 @@ const controller = {
         buscar[i].category = req.body.category,
         buscar[i].description = req.body.description
 
+        if(req.files.length == []) {
+
+          buscar[i].image = "";
+
+        } else {
+
+          buscar[i].image = req.files[0].filename;
+
+        }
+
         break
 
       }
@@ -83,7 +93,7 @@ const controller = {
     actualProduct = JSON.stringify(actualProduct);
 
     fs.writeFileSync(pathFile, actualProduct);
-    
+
     res.redirect('/products');
   },
 
